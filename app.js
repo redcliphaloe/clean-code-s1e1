@@ -10,8 +10,10 @@
 
 var taskInput = document.getElementById('new-task'); // Add a new task.
 var addButton = document.getElementsByTagName('button')[0]; // first button
-var incompleteTaskHolder = document.getElementById('incompletetasks'); // ul of #incompletetasks
-var completedTasksHolder = document.getElementById('completed-tasks'); // completed-tasks
+// ul of #incompletetasks
+var incompleteTaskHolder = document.getElementById('incompletetasks');
+// completed-tasks
+var completedTasksHolder = document.getElementById('completed-tasks');
 
 
 // New task list item
@@ -40,7 +42,8 @@ var createNewTaskElement = function(taskString) {
   editInput.type = 'text';
   editInput.className = 'task';
 
-  editButton.innerText = 'Edit'; // innerText encodes special characters, HTML does not.
+  // innerText encodes special characters, HTML does not.
+  editButton.innerText = 'Edit';
   editButton.className = 'edit';
 
   deleteButton.className = 'delete';
@@ -188,7 +191,8 @@ for (var i = 0; i < completedTasksHolder.children.length; i++) {
 
 
 
-// Issues with usability don't get seen until they are in front of a human tester.
+// Issues with usability don't get seen
+// until they are in front of a human tester.
 
 // prevent creation of empty tasks.
 
