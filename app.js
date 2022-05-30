@@ -82,7 +82,7 @@ var editTask = function() {
   }
   // toggle .edit-mode on the parent.
   listItem.classList.toggle('edit-mode');
-};
+}
 // Delete task.
 var deleteTask = function() {
   console.log('Delete Task...');
