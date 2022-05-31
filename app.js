@@ -13,7 +13,7 @@ var completedTasksHolder = document.getElementById('completed');
 // New task list item
 var createNewTaskElement = function(taskString) {
   var listItem = document.createElement('li');
-  listItem.className = 'list-item';
+  listItem.className = 'to-do__list-item';
   // input (checkbox)
   var checkBox = document.createElement('input'); // checkbx
   // label
@@ -26,21 +26,21 @@ var createNewTaskElement = function(taskString) {
   var deleteButton = document.createElement('button'); // delete button
   var deleteButtonImg = document.createElement('img'); // delete button image
   label.innerText = taskString;
-  label.className = 'task';
-  label.classList.add('lbl');
+  label.className = 'to-do__task';
+  label.classList.add('to-do__lbl');  
   // Each elements, needs appending
   checkBox.type = 'checkbox';
-  checkBox.classList.add('inpt');
+  checkBox.classList.add('to-do__inpt');
   editInput.type = 'text';
-  editInput.className = 'task';
-  editInput.classList.add('inpt');
+  editInput.className = 'to-do__task';
+  editInput.classList.add('to-do__inpt');
   // innerText encodes special characters, HTML does not.
   editButton.innerText = 'Edit';
   editButton.className = 'edit';
-  editButton.classList.add('btn');
+  editButton.classList.add('to-do__btn');
   deleteButton.className = 'delete';
-  deleteButton.classList.add('btn');
-  deleteButtonImg.classList.add('remove');
+  deleteButton.classList.add('to-do__btn');
+  deleteButtonImg.classList.add('to-do__remove');
   deleteButtonImg.src = './remove.svg';
   deleteButton.appendChild(deleteButtonImg);
   // and appending.
@@ -69,10 +69,10 @@ var editTask = function() {
   var editInput = listItem.querySelector('input[type="text"]');
   var label = listItem.querySelector('label');
   var editBtn = listItem.querySelector('.edit');
-  var containsClass = listItem.classList.contains('edit-mode');
-  // If class of the parent is .edit-mode
+  var containsClass = listItem.classList.contains('to-do__list-item_edit-mode');
+  // If class of the parent is .to-do__list-item_edit-mode
   if (containsClass) {
-    // switch to .edit-mode
+    // switch to .to-do__list-item_edit-mode
     // label becomes the inputs value.
     label.innerText = editInput.value;
     editBtn.innerText = 'Edit';
@@ -80,8 +80,8 @@ var editTask = function() {
     editInput.value = label.innerText;
     editBtn.innerText = 'Save';
   }
-  // toggle .edit-mode on the parent.
-  listItem.classList.toggle('edit-mode');
+  // toggle .to-do__list-item_edit-mode on the parent.
+  listItem.classList.toggle('to-do__list-item_edit-mode');
 }
 // Delete task.
 var deleteTask = function() {

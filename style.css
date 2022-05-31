@@ -12,11 +12,11 @@
   text-align: right;
 }
 
-.matrix-img {
+.matrix__img {
   width: 100%;
 }
 
-.matrix .more-inf {
+.matrix__more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -34,7 +34,7 @@
   margin: 0 auto 0;
 }
 
-.task {
+.to-do__task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -50,16 +50,16 @@ ul {
 }
 
 .list-item,
-.caption3 {
+.to-do__caption {
   list-style: none;
 }
 
-.inpt,
-.btn {
+.to-do__inpt,
+.to-do__btn {
   outline: none;
 }
 
-.btn {
+.to-do__btn {
   background: none;
   border: 0px;
   color: #888;
@@ -69,13 +69,13 @@ ul {
   cursor: pointer;
 }
 
-.btn:hover {
+.to-do__btn:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-.caption3,
-.lbl[for="new-task"] {
+.to-do__caption,
+.to-do__new-lbl {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -85,7 +85,7 @@ ul {
   text-transform: uppercase;
 }
 
-.inpt[type="text"] {
+.to-do__inpt[type="text"] {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -98,22 +98,22 @@ ul {
   color: #888;
 }
 
-.inpt[type="text"]:focus {
+.to-do__inpt[type="text"]:focus {
   color: #333;
 }
 
 /* New Task */
-.lbl[for="new-task"] {
+.to-do__new-lbl {
   display: block;
   margin: 0 0 20px;
 }
 
-#new-task {
+.to-do__inpt_new {
   width: 318px;
 }
 
 /* Task list */
-.list-item {
+.to-do__list-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -122,51 +122,51 @@ ul {
   align-items: center;
 }
 
-.list-item > * {
+.to-do__list-item > * {
   vertical-align: middle;
 }
 
-.list-item > .inpt[type="checkbox"] {
+.to-do__list-item > .to-do__inpt[type="checkbox"] {
   margin: 0 10px;
 }
 
-.list-item > .lbl {
+.to-do__list-item > .to-do__lbl {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.list-item > .inpt[type="text"] {
+.to-do__list-item > .to-do__inpt[type="text"] {
   width: 226px;
 }
 
-.btn.delete .remove {
+.to-do__btn.delete .to-do__remove {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.btn.delete .remove:hover {
+.to-do__btn.delete .to-do__remove:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-#completed .lbl {
+.to-do__completed .to-do__lbl {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.list-item .inpt[type="text"] {
+.to-do__list-item .to-do__inpt[type="text"] {
   display: none;
 }
 
-.list-item.edit-mode .inpt[type="text"] {
+.to-do__list-item_edit-mode .to-do__inpt[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-.list-item.edit-mode .lbl {
+.to-do__list-item_edit-mode .to-do__lbl {
   display: none;
 }
